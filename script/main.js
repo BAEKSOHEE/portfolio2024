@@ -1,7 +1,16 @@
 
 $(document).ready(function(){
 
-
+    //인트로 얼굴 이미지 마우스 오버시 변경
+    const i_face = $('.profile1 > .face > #chef_face1');
+    i_face.mouseenter(function(){
+        $(this).attr("src","images/profile_img1.png");
+    i_face.mouseleave(function(){
+        $(this).attr("src","images/profile_img2.png");
+        });
+    });
+    
+    
 
 
     // 마우스 오버, 아웃 시 이미지 자동 스크롤
@@ -103,9 +112,9 @@ $(document).ready(function(){
         return false;
     });
 
-    // 인트로 랜덤 이미지
-    let ran = Math.ceil(Math.random()*2);
-    document.getElementById('r_img').src="./images/profile_img"+ran+".png";
+    // // 인트로 랜덤 이미지
+    // let ran = Math.ceil(Math.random()*2);
+    // document.getElementById('r_img').src="./images/profile_img"+ran+".png";
 
 
 });
