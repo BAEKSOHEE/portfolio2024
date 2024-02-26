@@ -1,0 +1,129 @@
+    //main.scss
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+
+    $mainColor:rgb(50, 147, 207);
+    $subColor:rgb(197, 250, 197);
+    $fontColor:#fff;
+    $bgColor01:#ffff00;
+    $bgColor02:rgba(59, 59, 59, 0.8);
+    $bgColor03:#333;
+
+    $posi_01:relative;
+    $posi_02:absolute;
+
+    @mixin box_center($w:1280px, $m:0px auto){
+    width:$w;margin:$m;
+    }
+
+    @mixin cont(){
+    @include box_center;
+    background:$bgColor01;
+    height:800px;
+    margin-bottom:60px;
+    }
+
+    header{width:100%;height:94.6vh;}
+    header h1{
+    width:100px;height:50px;
+    position:absolute;
+    left:3%;top:2%;
+    background:$bgColor01;
+    }
+
+    @mixin posi_center{
+        position: absolute;
+        top: 42%; left: -100%;
+        transform: translate(-50%, -50%);
+    }
+    #intro{
+    background:$subColor;
+    height:100vh;
+    }
+    #intro h2{
+        font-family:"Josefin Sans";
+        font-size: 120px;
+        font-weight: bold;
+        text-shadow: 0px 5px 4px #c5c5c5;
+        text-transform: uppercase;
+        @include posi_center
+    }
+
+    .ani01{
+    animation: title_ani infinite 3s;
+    }
+    @keyframes title_ani{
+        0%{top:42%;}
+        50%{top:50%;}
+        100%{top:42%;}
+    }
+    .gnb{
+    background:$bgColor02;
+    }
+    .gnb ul{
+    @include box_center;
+    display:flex;justify-content: space-evenly;
+    }
+    .gnb li a{
+    display:block;
+    font:bold 14px/50px 'Noto Sans KR';/*축약법-굵기 크기/줄간격 글꼴*/
+    text-transform: uppercase;
+    padding:0px 20px;
+    color:$fontColor;
+    }
+    .gnb li a:hover{
+    background:$mainColor;color:#fff;
+    }
+
+    .act{
+        position: fixed;
+        top: 0px;left: 0px;
+        z-index: 100;
+        width: 100%; height: 50px;
+    }
+    .act2{
+        animation: indicator 1s infinite !important;
+    }
+
+    @keyframes indicator {
+        0%{background: $mainColor;}
+        50%{background: $subColor;}
+        100%{background: $mainColor}
+    }
+    @keyframes icon_ani{
+        0%{bottom: 7%;}
+        50%{bottom: 6%;}
+        100%{bottom: 7%;}
+    }
+
+    .scroll_btn{
+        position: absolute;
+        left: 50%; bottom: 7%;
+        transform: translateX(-50%);
+        text-align: center;
+        text-transform: uppercase;
+        animation: icon_ani infinite 1s;
+    }
+    .scroll_btn i{
+        font-size: 24px;
+        color: $bgColor03;
+        padding-bottom: 5px;
+    }
+
+    // main콘텐츠 서식
+    main{}
+    section{@include cont; padding-top: 100px;}
+    #profile{}
+    #project1{}
+    #project2{}
+    #project3{}
+    #design{}
+    #contact{}
+
+
+    footer{
+    background:$bgColor03;
+    text-align: center;
+    line-height: 40px;
+    color: $fontColor;
+    font-style: normal;
+    }

@@ -1,0 +1,513 @@
+@charset "utf-8";
+
+html{width: 1920px;}
+body{line-height: 30px; overflow-x: hidden;}
+
+/* 헤더 */
+.logo img{width: 200px; position: fixed; top: 3%;left: 1%; z-index: 101;}
+
+/* 내비게이션 */
+.gnb{
+    position: fixed;
+    right: 40px;top: 40%;
+    color: rgb(121, 121, 121);
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.gnb i{color: rgb(216, 8, 8);}
+.gnb ul li:hover{color: #000; scale: 1.1; font-weight: bold;}
+
+.act{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 인트로 */
+.profile1 h2{
+    position: absolute;
+    left: 45%; top: 15%;
+    font-family: 'Nanum Pen Script';
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 80px;
+}
+.cooking{
+    position: relative;
+    top: 0; left: 0;
+    width: 600px;
+    height: 1000px;
+}
+.cooking .area{
+    bottom: 0;
+}
+/* 후라이팬 */
+.cooking .area .pan{
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    animation: flip 2.1s ease-in-out infinite;
+}
+/* 고기 */
+.cooking .area .beef .html{
+    position: absolute;
+    top: 0%; left: 61%;
+    animation: jump 2.1s ease-in-out infinite;
+    z-index: 101;
+}
+.cooking .area .beef .html img{
+    width: 450px; height: 300px;
+}
+
+.cooking .sub{
+    position: absolute;
+    top: 0;
+    /* opacity: 0; */
+}
+
+.cooking .sub img{width: 100%;}
+
+/* 브로콜리 */
+.cooking .sub:first-child{
+    left: 105%;
+    width: 300px;
+    animation: drop 2.1s ease-in-out infinite;
+    z-index: 100;
+}
+
+/* 블루베리 */
+.cooking .sub:nth-child(2){
+    left: 80%;
+    top: 30;
+    width: 300px;
+    animation: drop 2.1s ease-in-out infinite;
+}
+/* 노랑파프리카 */
+.cooking .sub:nth-child(3){
+    width: 200px;
+    left: 110%;
+    top: 0px;
+    animation: jump2 3s ease-in-out infinite;
+    z-index: 100;
+}
+
+/*당근 */
+.cooking .sub:nth-child(4){
+    left: 55%;
+    top: 30px;
+    animation: drop 2.1s ease-in-out infinite;
+}
+/* 오이 */
+.cooking .sub:nth-child(5){
+    width: 130px;
+    left: 58%;
+    animation: jump3 2s ease-in-out infinite;
+    z-index: 100;
+}
+/* 토마토 */
+.cooking .sub:nth-child(6){
+    width: 120px;
+    left: 130%;
+    top: 0;
+    animation: star 1s infinite;
+    z-index: 100;
+}
+/* 빨강파프리카 */
+.cooking .sub:nth-child(7){
+    width: 200px;
+    left: 65%;
+    top: 30%;
+    animation: star 1s infinite;
+    
+}
+.swing{
+position: absolute;
+bottom: 10%;
+left: 13%;
+z-index: 100;
+rotate: 60deg;
+animation: swing 1s infinite;
+width: 180px;
+}
+.swing2{
+    position: absolute;
+    bottom: 30%; left: 30%;
+    width: 100px;
+    rotate: 30deg;
+}
+
+
+/* 인트로 애니메이션 */
+@keyframes flip {
+            0% {transform: rotate(0deg);    }
+            30%, 50% {transform: rotate(0deg);    }
+            55% {transform: rotate(27deg);    }
+            100% {transform: rotate(0deg);    }
+                }
+@keyframes jump{
+    0% {top: 24;
+        transform: rotateX(85deg);}
+    25% {top: 10%;
+        transform: rotateX(0deg);}
+    50% {top: 60%;
+        transform: rotateX(85deg);}
+    75% {transform: rotateX(0deg);}
+    100% {transform: rotateX(85deg);}
+}
+@keyframes jump2{
+    0% {top: 0;
+        transform: rotate(360deg);}
+    25% {top: 20%;
+        transform: rotate(0deg);}
+    50% {top: 60%;
+        transform: rotate(360deg);}
+    75% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes star{
+    0%{opacity: 0;}
+    50%{opacity: 1; rotate: -10deg;}
+    100%{opacity: 0;}
+}
+@keyframes drop {
+0% {transform: scale(0.33, 0.33);
+    top: 0.5; }
+50% {transform: scale(0.7, 0.7);
+    opacity: 1;}
+100% {transform: scale(0.15, 0.15);
+    top: 50%;;
+    opacity: 0;}
+}
+@keyframes jump3{
+    0% {top: 0;}
+    50% {top: 60%;}
+    100% {top: 0;}
+}
+@keyframes swing{
+    0%{rotate: 0deg;}
+    50%{rotate: 50deg;}
+    100%{rotate: 0deg;}
+}
+.scroll_btn{
+    position: absolute;
+    left: 52%; bottom: 7%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-transform: uppercase;
+    animation: icon_ani infinite 1s;
+    color: rgb(216, 8, 8);
+}
+.scroll_btn i{
+    font-size: 24px;
+    color: rgb(216, 8, 8);
+    padding-bottom: 5px;
+}
+@keyframes icon_ani{
+    0%{bottom: 7%;}
+    50%{bottom: 6%;}
+    100%{bottom: 7%;}
+}
+
+/* 프로필 */
+.profile2{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    line-height: 38px;
+}
+
+
+.face img:first-child{
+position: absolute;
+top: 47%; right: 16%;
+scale: 3;
+}
+#chef{
+    position: absolute;
+    right: 9%; top: 23%;
+    width: 200px;
+}
+.face_info{
+    position: absolute;
+    bottom: 7%;
+    right: 15%;
+    text-align: center;
+}
+
+.profile_img2{
+    position: relative;
+    top: 100px; left: 10%;
+}
+.profile_img2 img{
+    width: 450px;}
+.img2_bg{
+    position: absolute;
+    background: rgb(252, 164, 164);
+    width: 1054px; height: 600px;
+    top: -90px; left: -700px;
+    z-index: -10;
+}
+.profile_text{
+    width: 800px;
+}
+.about_text dl, .education dl, .certi dl, .career dl{
+    display: flex;
+}
+.skill_text img{
+    width: 80px; height: 90px;
+}
+.about_text{width: 800px; display: flex; flex-flow: row wrap;}
+.about dl{width: 50%;}
+.about_text dl{display: flex; flex-flow: row wrap;}
+
+/* 메인페이지 */
+section{padding: 120px 0px 100px 0px;}
+section:first-child{padding: 0px;}
+.bg_box{
+    position: relative;
+    margin: 0px auto;
+    padding: 0px;
+
+}
+.menu_bg{
+    width: 100%;
+    height: 320px;
+    position: absolute;
+    top: 130px;
+    z-index: -100;
+}
+.menu1_bg{background: #FFED5A;}
+.menu2_bg{background: #FF8E5F;}
+.menu3_bg{background: #6877FF;}
+.menu4_bg{background: #FF6777;}
+.gallery_bg{background: #ff0; height: 400px;}
+
+.menu1{
+    /* padding-top: 200px; */
+    height: 650px;
+    /* display: flex;
+    justify-content: center; */
+}
+.mockup{
+    position: relative;
+    left: 150px;
+}
+.mockup img{
+    /* width: 800px; */
+}
+.menu1_text{
+    position: absolute;
+    right: 200px;
+    width: 600px;}
+.menu_name, .gallery h2{
+    font-family: "Protest Riot";
+    font-size: 30px;
+    color: rgb(216, 8, 8);
+}
+.title{
+    font-weight: bold;
+    font-size: 20px;
+}
+.taste{font-weight: bold; padding:10px ;}
+.fa-cookie-bite{color: brown;}
+table{
+    width: 500px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    border-collapse: collapse;
+}
+table thead{background: rgb(216, 8, 8); color: #fff;}
+table th, table td{padding: 10px 0px 10px 0px; border-bottom: 1px solid #c6c6c6;}
+tbody tr td{font-weight: bold;}
+tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
+.show{background: rgb(179, 179, 179); color: #fff; font-weight: bold; padding: 8px 20px; border-radius: 60px;}
+.show:hover{background: #333; color: rgb(250, 214, 12);}
+
+#num_cor1{
+    background: #FFF7BB;
+    padding: 10px;
+    font-size: small;
+    }
+#num_cor2{
+    background:#FBB90E ;
+    padding: 10px;
+    font-size: small;
+}
+#num_cor3{
+    background: #f05323;
+    padding: 10px;
+    font-size: small;
+}
+
+.mock_tool{
+    width: 550px; height: 300px;
+    position: absolute;
+    top: 10px;left: 100px;
+    z-index: 10;
+}
+.mock_ta{
+    width: 200px; height: 100px;
+    position: absolute;
+    top: 200px; left: 550px;
+    z-index: 11;
+}
+.mock_mo{
+    width: 130px; height: 200px;
+    position: absolute;
+    top: 220px; left: 5px;
+    z-index: 10;
+}
+
+#num_mock{width: 100%;}
+#numta_mock{width: 100%;}
+#nummo_mock{width: 100%;}
+
+#num_tool{
+    position: absolute;
+    top: 63px; left: 150px;
+    width: 460px; height: 300px;
+    overflow: hidden;
+}
+#num_mock_pc{
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 100%;
+}
+#num_tool_ta{
+    position: absolute;
+    top: 200px; left: 550px;
+    width: 190px; height: 230px;
+    overflow: hidden;
+    z-index: 10;
+}
+#num_mock_ta{
+    position: absolute;
+    top: 10px; left: 17px;
+    width: 100%;
+}
+#num_tool_mo{
+    position: absolute;
+    top: 231px; left: 26px;
+    width: 90px; height: 190px;
+    overflow: hidden;
+}
+#num_mock_mo{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+}
+
+/* 갤러리 */
+.gallery h2{text-align: center; padding-bottom: 70px;}
+
+.g_all{display: flex; width: 830px; margin: 0px auto;}
+
+.gallery ul li{width: 280px; overflow: hidden; position: relative;}
+.gallery ul li a img{object-fit: cover;}
+
+.g_1 > li:first-child{height: 180px;}
+.g_1 > li:first-child img{transform: translate(-300px, -50px);}
+.g_1 > li:nth-child(2){height: 250px;}
+.g_1 > li:nth-child(2) img{transform: translate(-60px, -30px);}
+.g_1 > li:last-child{height: 330px;}
+.g_1 > li:last-child img{transform: translate(-120px, -70px);}
+
+
+.g_2 > li:first-child{height: 150px;}
+.g_2 > li:first-child img{transform: translate(-110px, -170px);}
+.g_2 > li:nth-child(2){height: 280px;}
+.g_2 > li:nth-child(2) img{transform: translate(-10px, -60px);}
+.g_2 > li:last-child{height: 330px;}
+.g_2 > li:last-child img{transform: translate(-20px, -50px);}
+
+
+.g_3 > li:first-child{height: 280px;}
+.g_3 > li:first-child img{transform: translate(-50px, -70px);}
+.g_3 > li:nth-child(2){height: 200px;}
+.g_3 > li:last-child{height: 180px;}
+.g_3 > li:last-child img{transform: translateY(-120px);}
+
+
+
+.g_txt{
+    background: rgba(0,0,0,.7);
+    display: block;
+    line-height: 50px;
+    position: absolute;
+    bottom: -60px; left: 0px;
+    width: 320px; height: 60px;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* 갤러리 모달창 */
+
+.modal{
+    width: 1000px;
+    height: 600px;
+    position: fixed;
+    top: 20%;left: 25%;
+    background: rgba(0,0,0,.8);
+}
+.modal .center > img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.modal .center .fas{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    top: 10%;left: 80%;
+    cursor: pointer;
+}
+.modal .center h3{
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 8%; left: 43%;
+}
+
+/* 탑버튼 */
+.top{
+    position: fixed;
+    right: 70px; bottom: 10%;
+    padding: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 10;
+    }
+    .top img{width: 70px;}
+
+.top:hover{filter: brightness(1.3);}
+
+
+/* 푸터 */
+footer{
+    width: 100%; height: 300px;
+    background:rgb(216, 8, 8);
+    z-index: 10;
+    color: #fff;
+}
+
+footer a{color: #fff;}
+footer .edu{background: #000; font-family: '"Protest Riot"';}
+footer .edu ul{display: flex;}
+footer .edu ul li{padding: 10px; font-size: 15px;}
+footer .edu ul li:first-child{font-size: 20px; color: #FFED5A;}
+footer .edu ul li a:hover{color: #FFED5A; font-weight: bold;}
+footer .contact{padding: 20px 0px 0px 10px;}
+footer .contact h2{font-size: 40px;padding: 10px 0px 20px 10px;}
+footer .contact ul{display: flex; border: 3px solid #fff;}
+footer .contact ul li:first-child{font-size: 20px;}
+footer .contact ul li{padding: 5px 10px;}
+footer .contact ul li a:hover{font-weight: bold; text-decoration: underline;}
+footer .contact ul:nth-child(3){transform: translate(450px, -46px);}
+footer .contact ul:nth-child(4){transform: translate(750px, -92px);}
+
+
+/* 고쳐야할 것 */
+

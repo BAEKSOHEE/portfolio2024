@@ -1,0 +1,19 @@
+//base.css
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap");
+
+
+$baseFont:'Noto Sans KR',arial, sans-serif;
+$baseFontSize:13px;
+$baseColor:#333;
+
+
+body{
+  font-family: $baseFont;
+  font-size:$baseFontSize;
+  color:$baseColor;
+}
+a{
+  color:$baseColor;
+  font-size:$baseFontSize;
+  text-decoration:none;
+}
