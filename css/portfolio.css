@@ -28,7 +28,7 @@ body{line-height: 30px; overflow-x: hidden;}
 /* 인트로 */
 .profile1 h2{
     position: absolute;
-    left: 45%; top: 15%;
+    right: 19%; top: 17%;
     font-family: 'Nanum Pen Script';
     font-size: 80px;
     font-weight: 300;
@@ -197,11 +197,11 @@ width: 180px;
     text-align: center;
     text-transform: uppercase;
     animation: icon_ani infinite 1s;
-    color: rgb(216, 8, 8);
+    color: #df9191;
 }
 .scroll_btn i{
     font-size: 24px;
-    color: rgb(216, 8, 8);
+    color: #FCA4A4;
     padding-bottom: 5px;
 }
 @keyframes icon_ani{
@@ -220,34 +220,35 @@ width: 180px;
 
 .face img:first-child{
 position: absolute;
-top: 47%; right: 16%;
-scale: 3;
+bottom: 36%; right: 16.2%;
+scale: 2;
 }
 #chef{
     position: absolute;
-    right: 9%; top: 23%;
-    width: 200px;
+    right: 13.1%; bottom: 50.3%;
+    width: 100px;
     z-index: 11;
 }
 
 .face_info{
     position: absolute;
-    bottom: 24%;
-    right: 15%;
+    bottom: 20%;
+    right: 15.1%;
     text-align: center;
     z-index: -10;
+    scale: 1.5;
 }
 #f_b{
     position: absolute;
-    right: 33%;
-    bottom: 45%;
-    scale: 2.5;
+    right: 27%;
+    bottom: 40%;
+    scale: 1.5;
 }
 .f_b_t{
     position: absolute;
-    right: 30.5%;
-    bottom: 50%;
-    font-size: 40px;
+    right: 26.5%;
+    bottom: 44.5%;
+    font-size: 30px;
     font-family: 'Nanum Pen Script';
 }
 .profile_img2{
@@ -263,15 +264,17 @@ scale: 3;
     top: -90px; left: -700px;
     z-index: -10;
 }
+.mbti{position: absolute; top: 260px; left: -343px; font-size: 200px; rotate: -30deg; color: #cc8484;}
 .profile_text{
     width: 800px;
 }
+.profile_text div dl{text-indent: 15px;}
 .profile_text div h3{color: rgb(8, 8, 139); font-size: 20px;}
 .about_text dl, .education dl, .certi dl, .career dl{
     display: flex;
 }
 .skill_text img{
-    width: 80px; height: 90px;
+    width: 45px; height: 50px; padding-right: 10px; margin-left: 15px;
 }
 .about_text{width: 800px; display: flex; flex-flow: row wrap;}
 .about dl{width: 50%;}
@@ -289,9 +292,9 @@ section:first-child{padding: 0px;}
 }
 .menu_bg{
     width: 100%;
-    height: 320px;
+    height: 400px;
     position: absolute;
-    top: 130px;
+    top: 190px;
     z-index: -100;
 }
 .menu1_bg{background: #FFED5A;}
@@ -316,7 +319,9 @@ section:first-child{padding: 0px;}
 .menu1_text{
     position: absolute;
     right: 200px;
-    width: 600px;}
+    width: 600px;
+    line-height: 35px;
+}
 .menu_name, .gallery h2{
     font-family: "Protest Riot";
     font-size: 30px;
@@ -334,7 +339,7 @@ table{
     border-collapse: collapse;
 }
 table thead{background: rgb(216, 8, 8); color: #fff;}
-table th, table td{padding: 10px 0px 10px 0px; border:1px solid #333;}
+table th, table td{padding: 10px 0px 10px 0px; border:2px solid #fff;}
 
 tbody tr td{font-weight: bold;}
 tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
@@ -396,8 +401,8 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
 }
 #num_tool_ta{
     position: absolute;
-    top: 200px; left: 550px;
-    width: 190px; height: 230px;
+    top: 199px; left: 550px;
+    width: 190px; height: 234px;
     overflow: hidden;
     z-index: 10;
 }
@@ -506,8 +511,8 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
 
 /* 푸터 */
 footer{
-    width: 100%; height: 300px;
-    background:rgb(216, 8, 8);
+    width: 100%; height: 310px;
+    background:#FCA4A4;
     z-index: 10;
     color: #fff;
 }
@@ -527,6 +532,7 @@ footer .contact ul li a:hover{font-weight: bold; text-decoration: underline;}
 footer .contact ul:nth-child(3){transform: translate(450px, -46px);}
 footer .contact ul:nth-child(4){transform: translate(750px, -92px);}
 
+.f_bottom{display: flex; justify-content: space-between; color: #333; font-size: 12px; padding: 0px 20px 0px 20px;}
 
 /* 고쳐야할 것 */
 
