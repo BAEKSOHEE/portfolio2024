@@ -197,11 +197,11 @@ width: 180px;
     text-align: center;
     text-transform: uppercase;
     animation: icon_ani infinite 1s;
-    color: #df9191;
+    color: #ff4a4a;
 }
 .scroll_btn i{
     font-size: 24px;
-    color: #FCA4A4;
+    color: #ff4a4a;
     padding-bottom: 5px;
 }
 @keyframes icon_ani{
@@ -247,10 +247,11 @@ scale: 2;
 .f_b_t{
     position: absolute;
     right: 26.5%;
-    bottom: 44.5%;
+    bottom: 42.5%;
     font-size: 30px;
     font-family: 'Nanum Pen Script';
 }
+.m_o{font-size: 22px;}
 .profile_img2{
     position: relative;
     top: 100px; left: 10%;
@@ -424,7 +425,8 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
 }
 
 /* 갤러리 */
-.gallery h2{text-align: center; padding-bottom: 70px;}
+.gallery{padding-top: 30px;}
+.gallery h2{text-align: center; padding-bottom: 60px;}
 
 .g_all{display: flex; width: 830px; margin: 0px auto;}
 
@@ -434,24 +436,25 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
 .g_1 > li:first-child{height: 180px;}
 .g_1 > li:first-child img{transform: translate(-300px, -50px);}
 .g_1 > li:nth-child(2){height: 250px;}
-.g_1 > li:nth-child(2) img{transform: translate(-60px, -30px);}
-.g_1 > li:last-child{height: 330px;}
+.g_1 > li:nth-child(2) img{transform: translate(-80px, -70px);}
+.g_1 > li:last-child{height: 260px;}
 .g_1 > li:last-child img{transform: translate(-120px, -70px);}
 
 
-.g_2 > li:first-child{height: 150px;}
-.g_2 > li:first-child img{transform: translate(-110px, -170px);}
-.g_2 > li:nth-child(2){height: 280px;}
-.g_2 > li:nth-child(2) img{transform: translate(-10px, -60px);}
-.g_2 > li:last-child{height: 330px;}
-.g_2 > li:last-child img{transform: translate(-20px, -50px);}
+.g_2 > li:first-child{height: 200px;}
+.g_2 > li:first-child img{transform: translate(-110px, -40px);}
+.g_2 > li:nth-child(2){height: 250px;}
+.g_2 > li:nth-child(2) img{transform: translate(-10px, -100px);}
+.g_2 > li:last-child{height: 290px;}
+.g_2 > li:last-child img{transform: translate(-160px, -10px);}
 
 
 .g_3 > li:first-child{height: 280px;}
-.g_3 > li:first-child img{transform: translate(-50px, -70px);}
+.g_3 > li:first-child img{transform: translate(10px, -50px);}
 .g_3 > li:nth-child(2){height: 200px;}
-.g_3 > li:last-child{height: 180px;}
-.g_3 > li:last-child img{transform: translateY(-120px);}
+.g_3 > li:nth-child(2) img{transform: translate(-140px, -115px);}
+.g_3 > li:last-child{height: 200px;}
+.g_3 > li:last-child img{transform: translate(-150px, -80px);}
 
 
 
@@ -460,10 +463,11 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
     display: block;
     line-height: 50px;
     position: absolute;
-    bottom: -60px; left: 0px;
-    width: 320px; height: 60px;
+    bottom: -50px; left: 0px;
+    width: 320px; height: 50px;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
+    padding-left: 10px;
 }
 
 /* 갤러리 모달창 */
