@@ -22,9 +22,10 @@
 
     <!-- 제이쿼리 UI라이브러리 -->
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-
     <script src="./script/main.js"></script>
-    <script src="./script/fullpage.js"></script>
+
+    <!-- 제이쿼리 모달창 -->
+    <script src="./script/jquery.cookie.js"></script>
 
 
     <!-- 풀페이지 -->
@@ -44,14 +45,15 @@
     </a>
     <nav class="gnb">
         <ul>
-            <li><i class="fa-solid fa-utensils"></i> Home</li>
-            <li><i class="fa-solid fa-utensils"></i><span> About Me</span></li>
-            <li><i class="fa-solid fa-utensils"></i><span> numbuzin</span></li>
-            <li><i class="fa-solid fa-utensils"></i><span> chukjibub</span></li>
-            <li><i class="fa-solid fa-utensils"></i><span> daewoong</span></li>
-            <li><i class="fa-solid fa-utensils"></i><span> animal</span></li>
-            <li><i class="fa-solid fa-utensils"></i><span> UI/UX Design</span></li>
-            <li><i class="fa-solid fa-utensils"></i><span> Contact me</span></li>
+            <li><img src="./images/gnb_icon1.png" alt="아이콘"><span> Home</span></li>
+            <li><img src="./images/gnb_icon1.png" alt="아이콘"><span> About Me</span></li>
+            <li><img src="./images/gnb_icon1.png" alt="아이콘"><span> 1. Beauty</span></li>
+            <li><img src="./images/gnb_icon1.png" alt="아이콘"><span> 2. Leisure</span></li>
+            <li><img src="./images/gnb_icon1.png" alt="아이콘"><span> 3. Health</span></li>
+            <li><img src="./images/gnb_icon1.png" alt="아이콘"><span> 4. Culture</span></li>
+            <li><img src="./images/gnb_icon1.png" alt="아이콘"><span> 5. Pet</span></li>
+            <li><img src="./images/gnb_icon1.png" alt="아이콘"><span> 6. Education</span></li>
+            <li><img src="./images/gnb_icon1.png" alt="아이콘"><span> 7. UI/UX Design</span></li>
         </ul>
     </nav>
     </header>
@@ -59,13 +61,12 @@
     <section class="profile1">
         <h2>코드로 맛있게 요리하다!<br>코딩요리사 백소희입니다.</h2>
         <div class="face">
-            <img src="./images/profile_img2.png" alt="사진" id="chef_face1">
+            <img src="./images/profile_img1.png" alt="사진" id="chef_face1">
 
             <img src="./images/chef.png" alt="모자" id="chef">
                 <img src="./images/chef_body.png" alt="몸통" class="face_info">
             <img src="./images/text.png" alt="말풍선" id="f_b">
             <p class="f_b_t">소희 셰프입니다!<br><span class="m_o">&nbsp;마우스를 올려보세요.</span></p>
-            
         </div>
         <div class="scroll_btn">
             <i class="fa-solid fa-circle-arrow-down"></i><br>
@@ -159,19 +160,23 @@
                 <h3>Certification</h3>
                     <div class="certi_text">
                         <dl>
-                            <dt>취득날짜</dt>
+                            <dt>2024.04</dt>
+                            <dd>웹디자인기능사</dd>
+                        </dl>
+                        <dl>
+                            <dt>2012.06</dt>
                             <dd>MOS Excel</dd>
                         </dl>
                         <dl>
-                            <dt>취득날짜</dt>
+                            <dt>2012.06</dt>
                             <dd>MOS PowerPoint</dd>
                         </dl>
                         <dl>
-                            <dt>취득날짜</dt>
+                            <dt>2015.05</dt>
                             <dd>1종보통운전면허</dd>
                         </dl>
                         <dl>
-                            <dt>취득날짜</dt>
+                            <dt>2014.11</dt>
                             <dd>2급 생활스포츠지도사(배드민턴, 보디빌딩, 에어로빅)</dd>
                         </dl>
                     </div>
@@ -193,25 +198,27 @@
             </div>
         </div>
     </section>
+
+    <!-- 넘버즈인 -->
     <section class="menu1">
         <div class="mockup">
             <div class="mock_tool">
-                <img src="./images/mockup(pc).png" alt="넘버즈인 목업" id="num_mock">
+                <img src="./images/mockup(pc).png" alt="넘버즈인 목업" class="num_mock">
             </div>
             <div class="mock_ta">
-                <img src="./images/mockup(tablet).png" alt="테블릿 목업" id="numta_mock">
+                <img src="./images/mockup(tablet).png" alt="테블릿 목업" class="numta_mock">
             </div>
             <div class="mock_mo">
-                <img src="./images/mockup(mobile).png" alt="모바일 목업" id="nummo_mock">
+                <img src="./images/mockup(mobile).png" alt="모바일 목업" class="nummo_mock">
             </div>
-            <div id="num_tool">
-                <img src="./images/design_pc.png" alt="넘버즈인 pc" id="num_mock_pc">
+            <div class="num_tool">
+                <img src="./images/pc_nu.png" alt="넘버즈인 pc" class="num_mock_pc">
             </div>
-            <div id="num_tool_ta">
-                <img src="./images/design.tablet.png" alt="넘버즈인 tablet" id="num_mock_ta">
+            <div class="num_tool_ta">
+                <img src="./images/ta_nu.png" alt="넘버즈인 tablet" class="num_mock_ta">
             </div>
-            <div id="num_tool_mo">
-                <img src="./images/design_mobile.png" alt="넘버즈인 mobile" id="num_mock_mo">
+            <div class="num_tool_mo">
+                <img src="./images/mo_nu.png" alt="넘버즈인 mobile" class="num_mock_mo">
             </div>
         </div>
         <div class="bg_box">
@@ -220,12 +227,12 @@
         <div class="menu1_text">
             <h3 class="menu_name">MENU 1.</h3>
             <p class="title">넘버즈인 반응형 웹페이지</p>
-            <P>재료(Tool) : HTML, CSS, javascript, jquery, Photoshop, Figma</P>
+            <P>Tool : HTML, CSS, javascript, jquery, Photoshop, Figma</P>
             <p>Concept : 자유로운, 율동적인, 개성적인</p>
             <p>Color : <span id="num_cor1">main</span> <span id="num_cor2">sub1</span> <span id="num_cor3">sub2</span></p><br>
             <p>"넘버즈인" 브랜드의 기존 적응형 웹페이지를 반응형 웹페이지로 만들고 콘텐츠 추가 및 디자인을 개선하였습니다.</p>
             <p class="taste"><i class="fa-solid fa-cookie-bite"></i> 1번 메뉴 맛보기</p>
-            <p><a href="#" title="#" class="show">홈페이지 보기</a>  <a href="https://www.numbuzin.com/" title="#" class="show">기존 사이트</a></p><br>
+            <p><a href="https://baeksohee.github.io/numbuzin/" title="넘버즈인 반응형 웹페이지" class="show">홈페이지 보기</a>  <a href="https://www.numbuzin.com/" title="넘버즈인 기존사이트" class="show">기존 사이트</a></p><br>
             <table>
                 <thead>
                     <th>category</th>
@@ -233,49 +240,45 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>github</td><td><a href="https://baeksohee.github.io/numbuzin/" title="#">https://baeksohee.github.io/numbuzin/</a></td>
+                        <td>github</td><td><a href="https://github.com/BAEKSOHEE/numbuzin" title="넘버즈인 github 주소">https://github.com/BAEKSOHEE/numbuzin</a></td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>기획서</td><td><a href="./document/numbuzin.pdf" title="기획서">넘버즈인 기획서</a></td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
     </section>
 
+    <!-- 축지법 -->
         <section class="menu1">
             <div class="mockup">
                 <div class="mock_tool">
-                    <img src="./images/mockup(pc).png" alt="넘버즈인 목업" id="num_mock">
-                </div>
-                <div class="mock_ta">
-                    <img src="./images/mockup(tablet).png" alt="테블릿 목업" id="numta_mock">
+                    <img src="./images/mockup(pc).png" alt="축지법 목업" class="num_mock">
                 </div>
                 <div class="mock_mo">
-                    <img src="./images/mockup(mobile).png" alt="모바일 목업" id="nummo_mock">
+                    <img src="./images/mockup(mobile).png" alt="모바일 목업" class="nummo_mock">
                 </div>
-                <div id="num_tool">
-                    <img src="./images/design_pc.png" alt="넘버즈인 pc" id="num_mock_pc">
+                <div class="num_tool">
+                    <img src="./images/chukjibub_pc.jpg" alt="축지법 pc" class="chuk_mock_pc">
                 </div>
-                <div id="num_tool_ta">
-                    <img src="./images/design.tablet.png" alt="넘버즈인 tablet" id="num_mock_ta">
-                </div>
-                <div id="num_tool_mo">
-                    <img src="./images/design_mobile.png" alt="넘버즈인 mobile" id="num_mock_mo">
+                <div class="num_tool_mo">
+                    <img src="./images/mo_chuk.png" alt="축지법 mobile" class="chuk_mock_mo">
                 </div>
             </div>
             <div class="bg_box">
                 <div class="menu_bg menu2_bg">&nbsp;</div>
             </div>
+
         <div class="menu1_text">
             <h3 class="menu_name">MENU 2.</h3>
-            <p class="title">대웅제약 반응형 웹페이지</p>
-            <P>재료(Tool) : HTML, CSS, javascript, jquery, Photoshop, Figma</P>
-            <p>Concept : 활동적인, 성장력있는, 신뢰있는</p>
-            <p>Color : <span id="dae_cor1">main</span> <span id="dae_cor2">sub</span></p><br>
-            <p>"대웅제약"의 기존 적응형 웹페이지를 반응형 웹페이지로 만들고 콘텐츠 추가하여 메인페이지를 리뉴얼 하였습니다.</p>
-            <p class="taste"><i class="fa-solid fa-cookie-bite"></i> 2번 메뉴 맛보기</p>
-            <p><a href="#" title="#" class="show">홈페이지 보기</a>  <a href="https://www.numbuzin.com/" title="#" class="show">기존 사이트</a></p><br>
+            <p class="title">축지법 홈페이지</p>
+            <P>Tool : HTML, CSS, javascript, jquery, Photoshop, Figma</P>
+            <p>Concept : 즐거운, 다양한, 동적인</p>
+            <p>Color : <span id="chuk_cor1">main</span> <span id="chuk_cor2">sub</span></p><br>
+            <p class="team_txt">축제를 주제로 한 팀프로젝트 입니다.<br>로그인/회원가입/공지사항 페이지를 맡아 디자인 및 개발하였습니다.</p>
+            <p class="taste team_txt"><i class="fa-solid fa-cookie-bite"></i> 2번 메뉴 맛보기</p>
+            <p><a href="https://baeksohee.github.io/chukjibub/" title="축지법 pc" class="show">PC 버전</a>  <a href="http://thglthgl.dothome.co.kr/chukjibub_mb/mindex.html" title="축지법 mobile" class="show">Mobile 버전</a></p><br>
             <table>
                 <thead>
                     <th>category</th>
@@ -283,32 +286,36 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>github</td><td><a href="#" title="#">https://github.com/BAEKSOHEE/animal_haspital</a></td>
+                        <td>github</td><td><a href="https://github.com/BAEKSOHEE/chukjibub" title="축지법 github 주소">https://github.com/BAEKSOHEE/chukjibub</a></td>
                     </tr>
+                    <!-- <tr>
+                        <td>기획서</td><td><a href="#" title="기획서"></a></td>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
     </section>
 
+    <!-- 대웅제약 -->
         <section class="menu1">
             <div class="mockup">
                 <div class="mock_tool">
-                    <img src="./images/mockup(pc).png" alt="넘버즈인 목업" id="num_mock">
+                    <img src="./images/mockup(pc).png" alt="대웅제약 목업" class="num_mock">
                 </div>
                 <div class="mock_ta">
-                    <img src="./images/mockup(tablet).png" alt="테블릿 목업" id="numta_mock">
+                    <img src="./images/mockup(tablet).png" alt="테블릿 목업" class="numta_mock">
                 </div>
                 <div class="mock_mo">
-                    <img src="./images/mockup(mobile).png" alt="모바일 목업" id="nummo_mock">
+                    <img src="./images/mockup(mobile).png" alt="모바일 목업" class="nummo_mock">
                 </div>
-                <div id="num_tool">
-                    <img src="./images/design_pc.png" alt="넘버즈인 pc" id="num_mock_pc">
+                <div class="num_tool">
+                    <img src="./images/pc_dw.png" alt="대웅제약 pc" class="dw_mock_pc">
                 </div>
-                <div id="num_tool_ta">
-                    <img src="./images/design.tablet.png" alt="넘버즈인 tablet" id="num_mock_ta">
+                <div class="num_tool_ta">
+                    <img src="./images/ta_dw.png" alt="대웅제약 tablet" class="dw_mock_ta">
                 </div>
-                <div id="num_tool_mo">
-                    <img src="./images/design_mobile.png" alt="넘버즈인 mobile" id="num_mock_mo">
+                <div class="num_tool_mo">
+                    <img src="./images/mo_dw.png" alt="대웅제약 mobile" class="dw_mock_mo">
                 </div>
             </div>
             <div class="bg_box">
@@ -316,13 +323,13 @@
             </div>
         <div class="menu1_text">
             <h3 class="menu_name">MENU 3.</h3>
-            <p class="title">클론코딩_아프리카 동물병원 메인 홈페이지(PC, Mobile)</p>
-            <P>재료(Tool) : HTML, CSS, javascript, Photoshop, Figma</P>
-            <p>Concept : </p>
-            <p>Color : </p><br>
-            <p>아프리카 동물병원 홈페이지를 PC, Mobile 2가지 버전으로 구성하였습니다.</p>
-            <p class="taste"><i class="fa-solid fa-cookie-bite"></i> 2번 메뉴 맛보기</p>
-            <p><a href="#" title="#" class="show">홈페이지 보기</a>  <a href="https://www.numbuzin.com/" title="#" class="show">기존 사이트</a></p><br>
+            <p class="title">대웅제약 반응형 웹페이지</p>
+            <P>Tool : HTML, CSS, javascript, Photoshop, Figma</P>
+            <p>Concept : 활동적인, 성장력있는, 신뢰있는</p>
+            <p>Color : <span id="dw_cor1">main</span> <span id="dw_cor2">sub</span></p><br>
+            <p>"대웅제약"의 기존 적응형 웹페이지를 반응형 웹페이지로 만들고 콘텐츠 추가하여 메인페이지를 리뉴얼 하였습니다.</p>
+            <p class="taste"><i class="fa-solid fa-cookie-bite"></i> 3번 메뉴 맛보기</p>
+            <p><a href="https://baeksohee.github.io/daewoong/" title="대웅제약 반응형 웹페이지" class="show">홈페이지 보기</a>  <a href="https://www.daewoong.co.kr/kr/main/index" title="대웅제약 기존사이트" class="show">기존 사이트</a></p><br>
             <table>
                 <thead>
                     <th>category</th>
@@ -330,32 +337,30 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>github</td><td><a href="#" title="#">https://github.com/BAEKSOHEE/animal_haspital</a></td>
+                        <td>github</td><td><a href="https://github.com/BAEKSOHEE/daewoong" title="대웅제약 github 주소">https://github.com/BAEKSOHEE/daewoong</a></td>
                     </tr>
+                    <!-- <tr>
+                        <td>기획서</td><td><a href="#" title="기획서">대웅제약 기획서</a></td>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
     </section>
 
+    <!-- 교보문고 -->
         <section class="menu1">
             <div class="mockup">
                 <div class="mock_tool">
-                    <img src="./images/mockup(pc).png" alt="넘버즈인 목업" id="num_mock">
-                </div>
-                <div class="mock_ta">
-                    <img src="./images/mockup(tablet).png" alt="테블릿 목업" id="numta_mock">
+                    <img src="./images/mockup(pc).png" alt="교보문고 목업" class="num_mock">
                 </div>
                 <div class="mock_mo">
-                    <img src="./images/mockup(mobile).png" alt="모바일 목업" id="nummo_mock">
+                    <img src="./images/mockup(mobile).png" alt="모바일 목업" class="nummo_mock">
                 </div>
-                <div id="num_tool">
-                    <img src="./images/design_pc.png" alt="넘버즈인 pc" id="num_mock_pc">
+                <div class="num_tool">
+                    <img src="./images/pc_kb.png" alt="교보문고 pc" class="kb_mock_pc">
                 </div>
-                <div id="num_tool_ta">
-                    <img src="./images/design.tablet.png" alt="넘버즈인 tablet" id="num_mock_ta">
-                </div>
-                <div id="num_tool_mo">
-                    <img src="./images/design_mobile.png" alt="넘버즈인 mobile" id="num_mock_mo">
+                <div class="num_tool_mo">
+                    <img src="./images/mo_kb.png" alt="교보문고 mobile" class="kb_mock_mo">
                 </div>
             </div>
             <div class="bg_box">
@@ -363,13 +368,13 @@
             </div>
         <div class="menu1_text">
             <h3 class="menu_name">MENU 4.</h3>
-            <p class="title">클론코딩_아프리카 동물병원 메인 홈페이지(PC, Mobile)</p>
-            <P>도구(Tool) : HTML, CSS, javascript, Photoshop, Figma</P>
-            <p>Concept : </p>
-            <p>Color : </p><br>
-            <p>아프리카 동물병원 홈페이지를 PC, Mobile 2가지 버전으로 구성하였습니다.</p>
-            <p class="taste"><i class="fa-solid fa-cookie-bite"></i> 2번 메뉴 맛보기</p>
-            <p><a href="#" title="#" class="show">홈페이지 보기</a>  <a href="https://www.numbuzin.com/" title="#" class="show">기존 사이트</a></p><br>
+            <p class="title">교보문고 메인 홈페이지(PC, Mobile)</p>
+            <P>Tool : HTML, CSS, javascript, Photoshop, Figma</P>
+            <p>Concept : 지적인, 차분한, 품위있는</p>
+            <p>Color : <span id="kb_cor1">main</span> <span id="kb_cor2">sub</span></p><br>
+            <p>교보문고 홈페이지를 PC, Mobile 2가지 버전으로 새롭게 구성하였습니다.</p>
+            <p class="taste"><i class="fa-solid fa-cookie-bite"></i> 4번 메뉴 맛보기</p>
+            <p><a href="http://thglthgl.dothome.co.kr/kyobo/index.html" title="교보문고 pc" class="show">PC 버전</a>  <a href="http://thglthgl.dothome.co.kr/kyobo/mindex.html" title="교보문고 mobile" class="show">Mobile 버전</a></p><br>
             <table>
 
                 <thead>
@@ -378,7 +383,95 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>github</td><td><a href="#" title="#">https://github.com/BAEKSOHEE/animal_haspital</a></td>
+                        <td>github</td><td><a href="https://github.com/BAEKSOHEE/kyobo" title="교보문고 github 주소">https://github.com/BAEKSOHEE/kyobo</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 하림펫푸드 -->
+        <section class="menu1">
+            <div class="mockup">
+                <div class="mock_tool">
+                    <img src="./images/mockup(pc).png" alt="하림펫푸드 목업" class="num_mock">
+                </div>
+                <div class="mock_ta">
+                    <img src="./images/mockup(tablet).png" alt="테블릿 목업" class="numta_mock">
+                </div>
+                <div class="mock_mo">
+                    <img src="./images/mockup(mobile).png" alt="모바일 목업" class="nummo_mock">
+                </div>
+                <div class="num_tool">
+                    <img src="./images/pc_ha.png" alt="하림펫푸드 pc" class="ha_mock_pc">
+                </div>
+                <div class="num_tool_ta">
+                    <img src="./images/ta_ha.png" alt="하림펫푸드 tablet" class="ha_mock_ta">
+                </div>
+                <div class="num_tool_mo">
+                    <img src="./images/mo_ha.png" alt="하림펫푸드 mobile" class="ha_mock_mo">
+                </div>
+            </div>
+            <div class="bg_box">
+                <div class="menu_bg menu5_bg">&nbsp;</div>
+            </div>
+        <div class="menu1_text">
+            <h3 class="menu_name">MENU 5.</h3>
+            <p class="title">클론코딩_하림펫푸드 반응형 웹페이지</p>
+            <P>Tool : HTML, CSS, javascript, Photoshop, Figma</P>
+            <p>Concept : 활동적인, 친근한, 사랑스러운</p>
+            <p>Color : <span id="ha_cor1">main</span> <span id="ha_cor2">sub</span></p><br>
+            <p class="team_txt">하림펫푸드 홈페이지를 반응형 웹페이지로 클론코딩 하였습니다.</p>
+            <p class="taste team_txt"><i class="fa-solid fa-cookie-bite"></i> 5번 메뉴 맛보기</p>
+            <p><a href="https://baeksohee.github.io/harim/" title="하림펫푸드 반응형 웹페이지" class="show">홈페이지 보기</a>  <a href="https://www.harimpetfood.com/index.html" title="하림펫푸드 기존사이트" class="show">기존 사이트</a></p><br>
+            <table>
+                <thead>
+                    <th>category</th>
+                    <th>file</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>github</td><td><a href="https://github.com/BAEKSOHEE/harim" title="하림펫푸드 github 주소">https://github.com/BAEKSOHEE/harim</a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 교육과정 -->
+        <section class="menu1">
+            <div class="mockup">
+                <div class="mock_tool">
+                    <img src="./images/mockup(pc).png" alt="교육과정 목업" class="num_mock">
+                </div>
+                <div class="mock_ta">
+                    <img src="./images/mockup(tablet).png" alt="테블릿 목업" class="numta_mock">
+                </div>
+                <div class="num_tool">
+                    <img src="./images/edu.png" alt="교육과정 pc" class="edu_mock_pc">
+                </div>
+                <div class="num_tool_ta">
+                    <img src="./images/edu_ta.jpg" alt="교육과정 tablet" class="edu_mock_ta">
+                </div>
+            </div>
+            <div class="bg_box">
+                <div class="menu_bg menu6_bg">&nbsp;</div>
+            </div>
+        <div class="menu1_text">
+            <h3 class="menu_name">Education.</h3>
+            <p class="title">(디지털디자인) UI/UX반응형 웹디자인&웹퍼블리셔(코딩) 개발자</p>
+            <p>[2023.09 ~ 2024.02]<br> <b>6개월 동안 Html, Css, javascript, J-query, Sass, Bootstrap에 대한 교육을 수료하였습니다.</b></p>
+            <p class="taste team_txt"><i class="fa-solid fa-cookie-bite"></i> 6번 메뉴 맛보기</p>
+            <p><a href="http://thglthgl.dothome.co.kr/education/index.html" title="교육내용" class="show">교육내용 보기</a></p><br>
+            <table>
+                <thead>
+                    <th>category</th>
+                    <th>url</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>site</td><td><a href="http://thglthgl.dothome.co.kr/education/index.html" title="교육내용">http://thglthgl.dothome.co.kr/education/index.html</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -452,6 +545,22 @@
                 </a></li>
             </ul>
         </div>
+        <footer>
+            <div class="contact">
+                <h3>contact me <i class="fa-solid fa-phone-flip"></i></h3>
+                <dl>
+                    <dt><i class="fa-solid fa-heart"></i> Github</dt>
+                    <dd><a href="https://github.com/BAEKSOHEE" title="깃허브">https://github.com/BAEKSOHEE</a></dd>
+                    <dt><i class="fa-solid fa-heart"></i> Phone</dt>
+                    <dd><a href="tel:01081316432" title="전화통화">010-8131-6432</dd>
+                    <dt><i class="fa-solid fa-heart"></i> E-mail</dt>
+                    <dd><a href="#" title="이메일">qorthgml567@naver.com</a></dd>
+                </dl>
+            </div>
+            <div class="f_bottom">이 페이지는 해상도 1920*1080에 최적화되어 있습니다. 웹표준, 웹접근성을 준수합니다.
+            <address>copyright@2024 sohee allrights reserved.</address>
+        </div>
+    </footer>
     </section>
 
 
@@ -460,37 +569,6 @@
     </a>
 
 </main>
-<footer>
-    <div class="edu">
-        <ul>
-            <li>교육내용보기 <i class="fa-solid fa-file-lines"></i></li>
-            <li><a href="">html 과정</a></li>
-            <li><a href="">css 과정</a></li>
-            <li><a href="">javascript 과정</a></li>
-            <li><a href="">j-query 과정</a></li>
-            <li><a href="">sass 과정</a></li>
-            <li><a href="">bootstrap 과정</a></li>
-        </ul>
-    </div>
-    <div class="contact">
-        <h2>contact me <i class="fa-solid fa-phone-flip"></i></h2>
-        
-        <ul>
-            <li><i class="fa-solid fa-heart"></i> Github</li>
-            <li><a href="https://github.com/BAEKSOHEE" title="깃허브">https://github.com/BAEKSOHEE</a></li>
-        </ul>
-        <ul>
-            <li><i class="fa-solid fa-heart"></i> Phone</li>
-            <li><a href="tel:01081316432" title="전화통화">010-8131-6432</a></li>
-        </ul>
-        <ul>
-            <li><i class="fa-solid fa-heart"></i> E-mail</li>
-            <li><a href="#" title="이메일">qorthgml567@naver.com</a></li>
-        </ul>
-    </div>
-    <div class="f_bottom">이 페이지는 해상도 1920*768에 최적화되어 있습니다. 웹표준, 웹접근성을 준수합니다.
-    <address>copyright@2024 sohee allrights reserved.</address>
-</div>
-</footer>
+
 </body>
 </html>

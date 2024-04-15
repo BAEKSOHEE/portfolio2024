@@ -10,7 +10,7 @@ body{line-height: 30px; overflow-x: hidden;}
 .gnb{
     position: fixed;
     right: 40px;top: 40%;
-    color: rgb(121, 121, 121);
+    color: #616060;
     font-weight: bold;
     opacity: 0;
     visibility: hidden;
@@ -18,8 +18,33 @@ body{line-height: 30px; overflow-x: hidden;}
     cursor: pointer;
 }
 .gnb i{color: rgb(216, 8, 8);}
-.gnb ul li:hover{color: #000; scale: 1.1; font-weight: bold;}
+.gnb ul li{line-height: 40px;position: relative;}
+.gnb ul li:hover, .on{
+    color: #000; font-weight: bold;
+}
+.gnb ul li span{position:relative;z-index: 10;}
+.gnb ul li::before{
+    display:inline-block;
+    content: "";
+    background:#ff0;
+    transform: scaleX(0);
+    position: absolute;
+    top:0px;right:0px;bottom:0px;left:0px;
+    z-index: 0;
+    transition: 0.5s;
+    transform-origin: 0 50%;
+}
+.gnb ul li:hover::before{
+    transform: scaleX(1);
+    top:-3px;
+}
+@keyframes ani {
+    0%{width:0px;}
+    100%{width:100px;}
+}
 
+.gnb img{width: 30px; vertical-align: middle; float: left;
+    position: relative;top:3px;z-index: 10;}
 .act{
     opacity: 1 !important;
     visibility: visible !important;
@@ -283,7 +308,7 @@ scale: 2;
 .about_text dl dt{padding-right: 20px; font-weight: 600;}
 
 /* 메인페이지 */
-section{padding: 120px 0px 100px 0px;}
+section{padding: 140px 0px 100px 0px;}
 section:first-child{padding: 0px;}
 .bg_box{
     position: relative;
@@ -299,10 +324,12 @@ section:first-child{padding: 0px;}
     z-index: -100;
 }
 .menu1_bg{background: #FFED5A;}
-.menu2_bg{background: #FF8E5F;}
-.menu3_bg{background: #6877FF;}
-.menu4_bg{background: #FF6777;}
-.gallery_bg{background: #ff0; height: 400px;}
+.menu2_bg{background: #ff5207;}
+.menu3_bg{background: #E98300;}
+.menu4_bg{background: #4DAC27;}
+.menu5_bg{background: #e60019;}
+.menu6_bg{background: #979595;}
+.gallery_bg{background: #fabcbc; height: 400px;}
 
 .menu1{
     /* padding-top: 200px; */
@@ -337,14 +364,14 @@ section:first-child{padding: 0px;}
 table{
     width: 600px;
     text-align: center;
-    border-collapse: collapse;
+    font-size: 14px;
 }
 table thead{background: rgb(216, 8, 8); color: #fff;}
-table th, table td{padding: 10px 0px 10px 0px; border:2px solid #fff;}
+table th, table td{padding: 3px 0px 3px 0px; border:1px solid rgba(255,255, 255, 0);}
 
-tbody tr td{font-weight: bold;}
+tbody tr td{font-weight: bold; background: #fff;}
 tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
-.show{background: rgb(179, 179, 179); color: #fff; font-weight: bold; padding: 8px 20px; border-radius: 60px;}
+.show{background: #7e7d7d; color: #fff; font-weight: bold; padding: 8px 20px; border-radius: 60px;}
 .show:hover{background: #333; color: rgb(250, 214, 12);}
 
 #num_cor1{
@@ -375,7 +402,7 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
 .mock_ta{
     width: 200px; height: 100px;
     position: absolute;
-    top: 200px; left: 550px;
+    top: 190px; left: 550px;
     z-index: 11;
 }
 .mock_mo{
@@ -385,75 +412,139 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
     z-index: 10;
 }
 
-#num_mock{width: 100%;}
-#numta_mock{width: 100%;}
-#nummo_mock{width: 100%;}
+.num_mock{width: 100%;}
+.numta_mock{width: 100%;}
+.nummo_mock{width: 100%;}
 
-#num_tool{
+.num_tool{
     position: absolute;
     top: 63px; left: 150px;
     width: 460px; height: 300px;
     overflow: hidden;
 }
-#num_mock_pc{
+.num_mock_pc, .dw_mock_pc, .kb_mock_pc, .ha_mock_pc, .chuk_mock_pc, .edu_mock_pc{
     position: absolute;
     top: 0px;left: 0px;
     width: 100%;
 }
-#num_tool_ta{
+.num_tool_ta{
     position: absolute;
-    top: 199px; left: 550px;
-    width: 190px; height: 234px;
+    top: 194px; left: 550px;
+    width: 183px; height: 227px;
     overflow: hidden;
     z-index: 10;
 }
-#num_mock_ta{
+.num_mock_ta, .dw_mock_ta, .ha_mock_ta{
     position: absolute;
-    top: 10px; left: 17px;
+    top: 0px; left: 17px;
     width: 100%;
 }
-#num_tool_mo{
+.edu_mock_ta{position: absolute; top: 0; left: 17px; width: 100%; height: 100%;} 
+.num_tool_mo{
     position: absolute;
     top: 231px; left: 26px;
-    width: 90px; height: 190px;
+    width: 90px; height: 195px;
     overflow: hidden;
 }
-#num_mock_mo{
+.num_mock_mo, .dw_mock_mo, .kb_mock_mo, .ha_mock_mo, .chuk_mock_mo{
     position: absolute;
     top: 0;left: 0;
     width: 100%;
 }
+/* 축지법 */
+.team_txt{color: #fff;}
+#chuk_cor1{
+    background: #f05323;
+    padding: 13px;
+    border-radius: 50%;
+    font-size: small;
+    color: #fff;
+    }
+#chuk_cor2{
+    background: #FCE0DE;
+    padding: 13px;
+    border-radius: 50%;
+    font-size: small;
+    color: #333;
+    }
+/* 대웅제약 */
+#dw_cor1{
+    background: #E98300;
+    padding: 13px;
+    border-radius: 50%;
+    font-size: small;
+    color: #fff;
+    }
+#dw_cor2{
+    background:#565A5C ;
+    padding: 13px;
+    border-radius: 50%;
+    font-size: small;
+    color: #fff;
+}
+
+/* 교보문고 */
+#kb_cor1{
+    background: #4DAC27;
+    padding: 13px;
+    border-radius: 50%;
+    font-size: small;
+    color: #fff;
+    }
+#kb_cor2{
+    background:#525d9f;
+    padding: 13px;
+    border-radius: 50%;
+    font-size: small;
+    color: #fff;
+}
+
+/* 하림펫푸드 */
+#ha_cor1{
+    background: #e60019;
+    padding: 13px;
+    border-radius: 50%;
+    font-size: small;
+    color: #fff;
+    }
+#ha_cor2{
+    background:#4b4b4b;
+    padding: 13px;
+    border-radius: 50%;
+    font-size: small;
+    color: #fff;
+}
 
 /* 갤러리 */
-.gallery{padding-top: 30px;}
+.gallery{padding-top: 30px; padding-bottom: 0px;}
 .gallery h2{text-align: center; padding-bottom: 60px;}
 
-.g_all{display: flex; width: 830px; margin: 0px auto;}
+.g_all{display: flex; width: 830px; margin: 0px auto; padding-bottom: 30px;}
 
 .gallery ul li{width: 280px; overflow: hidden; position: relative;}
 .gallery ul li a img{object-fit: cover;}
 
-.g_1 > li:first-child{height: 180px;}
+.g_1 > li:first-child{height: 130px;}
 .g_1 > li:first-child img{transform: translate(-300px, -50px);}
-.g_1 > li:nth-child(2){height: 250px;}
+.g_1 > li:nth-child(2){height: 200px;}
 .g_1 > li:nth-child(2) img{transform: translate(-80px, -70px);}
-.g_1 > li:last-child{height: 260px;}
+.g_1 > li:last-child{height: 210px;}
 .g_1 > li:last-child img{transform: translate(-120px, -70px);}
 
 
-.g_2 > li:first-child{height: 200px;}
+.g_2 > li:first-child{height: 150px;}
 .g_2 > li:first-child img{transform: translate(-110px, -40px);}
-.g_2 > li:nth-child(2){height: 250px;}
+.g_2 > li:nth-child(2){height: 200px;}
 .g_2 > li:nth-child(2) img{transform: translate(-10px, -100px);}
-.g_2 > li:last-child{height: 290px;}
+.g_2 > li:last-child{height: 240px;}
 .g_2 > li:last-child img{transform: translate(-160px, -10px);}
 
 
-.g_3 > li:first-child{height: 280px;}
+.g_3 > li:first-child{height: 230px;}
 .g_3 > li:first-child img{transform: translate(10px, -50px);}
-.g_3 > li:nth-child(2){height: 200px;}
+.g_3 > li:nth-child(2){height: 150px;}
 .g_3 > li:nth-child(2) img{transform: translate(-140px, -115px);}
-.g_3 > li:last-child{height: 200px;}
+.g_3 > li:last-child{height: 150px;}
 .g_3 > li:last-child img{transform: translate(-150px, -80px);}
 
 
@@ -478,6 +569,7 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
     position: fixed;
     top: 20%;left: 25%;
     background: rgba(0,0,0,.8);
+    text-align: center;
 }
 .modal .center > img{
     position: absolute;
@@ -485,7 +577,7 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
     transform: translate(-50%,-50%);
 }
 .modal .center .fas{
-    font-size: 30px;
+    font-size: 25px;
     color: #fff;
     position: absolute;
     top: 10%;left: 80%;
@@ -495,7 +587,8 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
     color: #fff;
     font-size: 20px;
     position: absolute;
-    top: 8%; left: 43%;
+    top: 5%; left: 50%;
+    transform: translateX(-50%);
 }
 
 /* 탑버튼 */
@@ -515,28 +608,57 @@ tbody tr td:nth-child(2) a{color: rgb(141, 7, 7); }
 
 /* 푸터 */
 footer{
-    width: 100%; height: 310px;
     background:#FCA4A4;
     z-index: 10;
     color: #fff;
-}
-
+    }
 footer a{color: #fff;}
-footer .edu{background: #000; font-family: '"Protest Riot"';}
+footer .edu{background: #7e7d7d; font-family: '"Protest Riot"';}
 footer .edu ul{display: flex;}
 footer .edu ul li{padding: 10px; font-size: 15px;}
 footer .edu ul li:first-child{font-size: 20px; color: #FFED5A;}
 footer .edu ul li a:hover{color: #FFED5A; font-weight: bold;}
-footer .contact{padding: 20px 0px 0px 10px;}
-footer .contact h2{font-size: 40px;padding: 10px 0px 20px 10px;}
-footer .contact ul{display: flex; border: 3px solid #fff;}
-footer .contact ul li:first-child{font-size: 20px;}
-footer .contact ul li{padding: 5px 10px;}
-footer .contact ul li a:hover{font-weight: bold; text-decoration: underline;}
-footer .contact ul:nth-child(3){transform: translate(450px, -46px);}
-footer .contact ul:nth-child(4){transform: translate(750px, -92px);}
+footer .contact h3{font-size: 30px; line-height: 50px;}
 
+footer .contact dl{display: flex; border: 1px solid #fff;}
+footer .contact dl dt{padding: 0px 10px 0px 20px; font-weight: bold;}
+
+footer address{font-style:normal;}
 .f_bottom{display: flex; justify-content: space-between; color: #333; font-size: 12px; padding: 0px 20px 0px 20px;}
 
-/* 고쳐야할 것 */
+
+/* 팝업모달창 */
+.p_modal {
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, .7);
+position: fixed;
+top: 0px;
+left: 0px;
+text-align: center;
+z-index: 9999;
+}
+.p_modal > .banner{
+width: 400px;
+padding: 10px;
+border-radius: 10px;
+background: #fff;
+position: absolute;
+top: 50%; left: 50%;
+transform: translate(-50%, -50%);
+line-height: 40px;
+}
+.p_modal > .banner h2{font-size: 26px; color: red; padding-bottom: 20px;}
+.p_modal > .banner span{font-size: 14px; text-decoration: underline; }
+.p_modal .banner label {
+color: #000;
+font-size: 13px;
+line-height: 30px;
+}
+.p_modal input[type=checkbox]+label {
+margin-right: 200px; cursor: pointer;
+}
+.p_modal input{cursor: pointer;}
+
+
 
